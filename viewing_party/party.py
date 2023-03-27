@@ -66,7 +66,7 @@ def watch_movie(user_data, title):
     print(user_data["watchlist"][0]["title"])
     for i in range(len(user_data["watchlist"])):
         if user_data["watchlist"][i]["title"] == title:
-            user_data["watched"].append(user_data["watchlist"][i])
+            user_data["watched"].append(user_data["watchlist"][i]["title"])
             user_data["watchlist"].remove(user_data["watchlist"][i])
     return user_data
 
