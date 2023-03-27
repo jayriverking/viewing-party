@@ -65,8 +65,7 @@ def watch_movie(user_data, title):
     # always return user_data 
     for dict in user_data["watchlist"]:
         # print(i)
-        for k in dict.keys():
-
+        for k in dict:
             if title in k:
                 user_data["watched"].append(dict)
                 # print(user_data["watched"])
