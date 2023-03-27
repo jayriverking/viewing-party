@@ -141,13 +141,12 @@ def get_watched_avg_rating(user_data):
 def get_most_watched_genre(user_data):
     counter = {}
     for dict in user_data["watched"]:
-        print(dict['genre'])
-
-
-    # for loop
-    # counter = {}
-        # if genre not in counter, counter[genre] = 1
-        # counter[genre] += 1
+        # print(dict['genre'])
+        if dict['genre'] not in counter:
+            counter[dict['genre']] = 1
+        else:
+            counter[dict['genre']] += 1
+    print(counter)
     # return most_genre
     # if not watched list: return None
 
