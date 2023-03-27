@@ -30,7 +30,7 @@ def add_to_watched(user_data, movie):
 # add the movie to the "watched" list inside of user_data
 # return the user_data
 
-def add_to_watched_list(user_data, movie):
+def add_to_watchlist(user_data, movie):
     user_data["watchlist"].append(movie)
     return user_data
 
