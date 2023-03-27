@@ -1,3 +1,7 @@
+
+
+
+
 # ------------- WAVE 1 --------------------
 
 def create_movie(title, genre, rating):
@@ -73,7 +77,25 @@ janes_data = {
             "title": "MOVIE_TITLE_4",
             "genre": "GENRE_3",
             "rating": 2
-        }]
+        }],
+    "friends": [{"watched": [{
+            "title": "MOVIE_TITLE_5",
+            "genre": "GENRE_1",
+            "rating": 1
+        }, {
+            "title": "MOVIE_TITLE_2",
+            "genre": "GENRE_2",
+            "rating": 2
+        }, {
+            "title": "MOVIE_TITLE_3",
+            "genre": "GENRE_3",
+            "rating": 3
+        }, 
+        {
+            "title": "MOVIE_TITLE_8",
+            "genre": "GENRE_3",
+            "rating": 2
+        }]}]
     }
 
 def watch_movie(user_data, title):
