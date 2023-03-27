@@ -143,6 +143,8 @@ def get_watched_avg_rating(user_data):
     # Create a function named get_most_watched_genre. This function should...
 def get_most_watched_genre(user_data):
     counter = {}
+    most_genre = ""
+    score = 0 
 
     for dict in user_data["watched"]:
         # print(dict['genre'])
@@ -153,8 +155,8 @@ def get_most_watched_genre(user_data):
     # print(counter)
     for key, values in counter.items():
         # print(values)
-        most_genre = 0
-        if most_genre < values:
+        if values >= score:
+            score = values
             most_genre = key
     return most_genre
 
