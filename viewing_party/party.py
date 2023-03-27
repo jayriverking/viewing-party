@@ -63,11 +63,15 @@ def watch_movie(user_data, title):
     #conditional, remove fromwatchlist go to watch, return user_data 
 
     # always return user_data 
-    if title in user_data["watchlist"][0]:
-        user_data["watched"].append(title)
-        print(user_data["watched"])
-        user_data["watchlist"].remove(title)
-        print(user_data["watchlist"])
+    for dict in user_data["watchlist"]:
+        # print(i)
+        for k in dict.keys():
+
+            if title in k:
+                user_data["watched"].append(dict)
+                # print(user_data["watched"])
+                user_data["watchlist"].remove(dict)
+                # print(user_data["watchlist"])
     return user_data
 
 print(watch_movie(janes_data,"MOVIE_TITLE_1"))
