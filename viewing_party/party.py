@@ -198,6 +198,14 @@ print(get_most_watched_genre(janes_data))
 # ------------- WAVE 3 --------------------
 # -----------------------------------------
 
+#def get_unique_watched(user_data):
+# friends_list = []
+# user_list = []
+# diff_list (if dict in user_list and dict not in friends_list, append dict to diff list) = []
+# loop through user_data > access watched list > append dicts to user_list
+# 2nd loop through usre_data > friends > friends watched list > append dicts to friends_list
+# for dict in user_list if dict not in friends_list > append dict to diff list
+# return diff list
 
 # function 1 
 # Create a function named get_unique_watched. This function should...
@@ -209,6 +217,11 @@ print(get_most_watched_genre(janes_data))
 # Each movie dictionary has a "title".
 # Consider the movies that the user has watched, and consider the movies that their friends have watched. Determine which movies the user has watched, but none of their friends have watched.
 # Return a list of dictionaries, that represents a list of movies
+
+
+# def get_friends_unique_watched(user_data):
+# same logic as above, just reversed lol
+
 
 # function 2
 # Create a function named get_friends_unique_watched. This function should...
