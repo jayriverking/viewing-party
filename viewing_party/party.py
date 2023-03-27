@@ -145,7 +145,8 @@ def get_most_watched_genre(user_data):
     counter = {}
     most_genre = ""
     score = 0 
-
+    if len(user_data['watched']) == 0:
+        return None
     for dict in user_data["watched"]:
         # print(dict['genre'])
         if dict['genre'] not in counter:
