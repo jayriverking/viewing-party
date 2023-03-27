@@ -140,13 +140,22 @@ def get_watched_avg_rating(user_data):
     # Create a function named get_most_watched_genre. This function should...
 def get_most_watched_genre(user_data):
     counter = {}
+
     for dict in user_data["watched"]:
         # print(dict['genre'])
         if dict['genre'] not in counter:
             counter[dict['genre']] = 1
         else:
             counter[dict['genre']] += 1
-    print(counter)
+    # print(counter)
+    for key, values in counter.items():
+        # print(values)
+        most_genre = 0
+        if most_genre < values:
+            most_genre = key
+    return most_genre
+        # if val is greatest return val,key...or just the key?
+    # variable most_genre
     # return most_genre
     # if not watched list: return None
 
