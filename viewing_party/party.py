@@ -68,6 +68,11 @@ janes_data = {
             "title": "MOVIE_TITLE_3",
             "genre": "GENRE_3",
             "rating": 3
+        }, 
+        {
+            "title": "MOVIE_TITLE_4",
+            "genre": "GENRE_3",
+            "rating": 2
         }]
     }
 
@@ -121,7 +126,8 @@ def get_watched_avg_rating(user_data):
     return avg_rating
         # print(sum(dict['rating']))
 
-print(get_watched_avg_rating(janes_data))
+# print(get_watched_avg_rating(janes_data))
+
     # take one parameter: user_data
     #     the value of user_data will be a dictionary with a "watched" list of movie dictionaries
     #         This represents that the user has a list of watched movies
@@ -132,6 +138,20 @@ print(get_watched_avg_rating(janes_data))
 # Function 2 
 
     # Create a function named get_most_watched_genre. This function should...
+def get_most_watched_genre(user_data):
+    counter = {}
+    for dict in user_data["watched"]:
+        print(dict['genre'])
+
+
+    # for loop
+    # counter = {}
+        # if genre not in counter, counter[genre] = 1
+        # counter[genre] += 1
+    # return most_genre
+    # if not watched list: return None
+
+get_most_watched_genre(janes_data)
 
     # take one parameter: user_data
     #     the value of user_data will be a dictionary with a "watched" list of movie dictionaries. Each movie dictionary has a key "genre".
