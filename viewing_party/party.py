@@ -50,7 +50,13 @@ def add_to_watched_list(user_data, movie):
 
 
 def watch_movie(user_data, title):
-    #condition, remove. 
+    #conditional, remove fromwatchlist go to watch, return user_data 
+
+    # always return user_data 
+    if title in user_data["watchlist"]:
+        user_data["watched"].append(title)
+        user_data["watchlist"].remove(title)
+    return user_data
 
 # function 4
 # Create a function named watch_movie. This function should...
