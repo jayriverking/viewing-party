@@ -56,14 +56,26 @@ janes_data = {
             "genre": "GENRE_1",
             "rating": 1
         }],
-        "watched": []
+        "watched": [{
+            "title": "MOVIE_TITLE_1",
+            "genre": "GENRE_1",
+            "rating": 1
+        }, {
+            "title": "MOVIE_TITLE_2",
+            "genre": "GENRE_2",
+            "rating": 2
+        }, {
+            "title": "MOVIE_TITLE_3",
+            "genre": "GENRE_3",
+            "rating": 3
+        }]
     }
 
 def watch_movie(user_data, title):
     #conditional, remove fromwatchlist go to watch, return user_data 
 
     # always return user_data 
-    print(user_data["watchlist"][0]["title"])
+    # print(user_data["watchlist"][0]["title"])
     for i in range(len(user_data["watchlist"])):
         if user_data["watchlist"][i]["title"] == title:
             user_data["watched"].append(user_data["watchlist"][i]["title"])
@@ -72,7 +84,7 @@ def watch_movie(user_data, title):
 
     
 
-print(watch_movie(janes_data, "MOVIE_TITLE_1"))
+
 
 
 
@@ -97,7 +109,19 @@ print(watch_movie(janes_data, "MOVIE_TITLE_1"))
 
     #Function 1 
     # Create a function named get_watched_avg_rating. This function should...
+def get_watched_avg_rating(user_data):
+    avg_total = 0
+    counter = 0
+    # print(user_data["watched"][0]['rating'])
+    for dict in user_data["watched"]:
+        # print(dict['rating'])
+        avg_total += dict['rating']
+        counter += 1
+    avg_rating = avg_total / counter
+    return avg_rating
+        # print(sum(dict['rating']))
 
+print(get_watched_avg_rating(janes_data))
     # take one parameter: user_data
     #     the value of user_data will be a dictionary with a "watched" list of movie dictionaries
     #         This represents that the user has a list of watched movies
