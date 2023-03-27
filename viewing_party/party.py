@@ -115,6 +115,9 @@ def watch_movie(user_data, title):
     #Function 1 
     # Create a function named get_watched_avg_rating. This function should...
 def get_watched_avg_rating(user_data):
+    # if watchlist is empty , return zero
+    if len(user_data['watched']) == 0:
+        return 0
     avg_total = 0
     counter = 0
     # print(user_data["watched"][0]['rating'])
@@ -154,12 +157,9 @@ def get_most_watched_genre(user_data):
         if most_genre < values:
             most_genre = key
     return most_genre
-        # if val is greatest return val,key...or just the key?
-    # variable most_genre
-    # return most_genre
-    # if not watched list: return None
 
-get_most_watched_genre(janes_data)
+
+print(get_most_watched_genre(janes_data))
 
     # take one parameter: user_data
     #     the value of user_data will be a dictionary with a "watched" list of movie dictionaries. Each movie dictionary has a key "genre".
