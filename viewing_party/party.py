@@ -11,6 +11,11 @@ def create_movie(title, genre, rating):
 # The values of these key-value pairs should be appropriate values
 # If title is falsy, genre is falsy, or rating is falsy, this function should return None
 
+def add_to_watched(user_data, movie):
+    
+    user_data["watched"].append(movie)
+    return user_data 
+
 # function 2:
 # Create a function named add_to_watched. This function should...
 # take two parameters: user_data, movie
@@ -24,6 +29,10 @@ def create_movie(title, genre, rating):
 # }
 # add the movie to the "watched" list inside of user_data
 # return the user_data
+
+def add_to_watched_list(user_data, movie):
+    user_data["watchlist"].append(movie)
+    return user_data
 
 # function 3
 # Create a function named add_to_watchlist. This function should...
@@ -39,6 +48,9 @@ def create_movie(title, genre, rating):
 # add the movie to the "watchlist" list inside of user_data
 # return the user_data
 
+
+def watch_movie(user_data, title):
+    #condition, remove. 
 
 # function 4
 # Create a function named watch_movie. This function should...
