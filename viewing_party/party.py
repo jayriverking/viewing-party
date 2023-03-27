@@ -49,14 +49,28 @@ def add_to_watchlist(user_data, movie):
 # return the user_data
 
 
+# tester data
+janes_data = {
+        "watchlist": [{
+            "title": "MOVIE_TITLE_1",
+            "genre": "GENRE_1",
+            "rating": 1
+        }],
+        "watched": []
+    }
+
 def watch_movie(user_data, title):
     #conditional, remove fromwatchlist go to watch, return user_data 
 
     # always return user_data 
     if title in user_data["watchlist"][0]:
         user_data["watched"].append(title)
+        print(user_data["watched"])
         user_data["watchlist"].remove(title)
+        print(user_data["watchlist"])
     return user_data
+
+print(watch_movie(janes_data,"MOVIE_TITLE_1"))
 
 # function 4
 # Create a function named watch_movie. This function should...
