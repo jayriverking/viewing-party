@@ -1,7 +1,10 @@
 # ------------- WAVE 1 --------------------
 
 def create_movie(title, genre, rating):
-    pass
+    if title and genre and rating: 
+        return {"title": title, "genre": genre, "rating": rating}
+    else: 
+        return None
 # If those three attributes are truthy, then return a dictionary. This dictionary should...
 # Have three key-value pairs, with specific keys
 # The three keys should be "title", "genre", and "rating"
