@@ -205,12 +205,12 @@ def get_unique_watched(user_data):
 
     # loop through user_data 
     for i in range(len(user_data["watched"])): #for i in range(len(user_data['watched_list'])):
-        print(i)
+        # print(i)
         user_list.append(user_data["watched"][i])# user_data [watched list][i] # > append dicts to user_list
-        print(user_list)
-    for x in range(len(user_data["friends"]["watched"])):
-        friends_list.append(user_data["friends"]["watched"][x])
-        print(friends_list)
+        # print(user_list)
+    for x in range(len(user_data["friends"][0]["watched"])):
+        friends_list.append(user_data["friends"][0]["watched"][x])
+    print(friends_list)
         
 print(get_unique_watched(janes_data))  
         
