@@ -211,12 +211,11 @@ def get_unique_watched(user_data):
     for x in range(len(user_data["friends"][0]["watched"])):
         friends_list.append(user_data["friends"][0]["watched"][x])
     # print(friends_list)
-    print(f"{user_list=}, {friends_list=}")
+    # print(f"{user_list=}, {friends_list=}")
     for dict in user_list: 
-        
+        print(dict)
         if dict not in friends_list:
             diff_list.append(dict)
-            print(f"{dict}")
     return diff_list
         
 print(get_unique_watched(janes_data))  
