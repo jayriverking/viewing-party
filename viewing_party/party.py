@@ -214,7 +214,7 @@ def get_unique_watched(user_data):
     for dict in user_list: 
         if dict not in friends_list:
             diff_list.append(dict)
-            print(diff_list)
+    return diff_list
         
 print(get_unique_watched(janes_data))  
         
