@@ -307,7 +307,7 @@ def get_unique_watched(user_data):
     # print(f"USER_LIST: {user_list}, FRIENDS_LIST: {friends_list}")
     return diff_list
         
-print(get_unique_watched(james_data))  
+# print(get_unique_watched(james_data)) 
         
     # 2nd loop through user_data [friends] [friends watched list][i] > append dicts to friends_list
     # for dict in user_list if dict not in friends_list > append dict to diff list
@@ -327,7 +327,29 @@ print(get_unique_watched(james_data))
 
 # def get_friends_unique_watched(user_data):
 # same logic as above, just reversed lol
+def get_friends_unique_watched(user_data):
+    friends_list = []
+    user_list = []
+    diff_list = []# (if dict in user_list and dict not in friends_list, append dict to diff list) = []
 
+    # loop through user_data 
+    for i in range(len(user_data["watched"])): #for i in range(len(user_data['watched_list'])):
+        # print(i)
+        user_list.append(user_data["watched"][i])# user_data [watched list][i] # > append dicts to user_list
+        # print(user_list)
+    for j in range(len(user_data["friends"])):
+        for dict in (user_data["friends"][j]["watched"]):
+            friends_list.append(dict)
+    # print(friends_list)
+    # print(f"{user_list=}, {friends_list=}")
+    for dict in friends_list: 
+        # print(dict)
+        if dict not in user_list:
+            diff_list.append(dict)
+    # print(f"USER_LIST: {user_list}, FRIENDS_LIST: {friends_list}")
+    return diff_list
+        
+print(get_friends_unique_watched(james_data)) 
 
 # function 2
 # Create a function named get_friends_unique_watched. This function should...
