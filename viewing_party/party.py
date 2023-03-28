@@ -198,14 +198,25 @@ print(get_most_watched_genre(janes_data))
 # ------------- WAVE 3 --------------------
 # -----------------------------------------
 
-#def get_unique_watched(user_data):
-# friends_list = []
-# user_list = []
-# diff_list (if dict in user_list and dict not in friends_list, append dict to diff list) = []
-# loop through user_data (for i in range(len(user_data[watched_list])): user_data [watched list][i] > append dicts to user_list
-# 2nd loop through user_data [friends] [friends watched list][i] > append dicts to friends_list
-# for dict in user_list if dict not in friends_list > append dict to diff list
-# return diff list
+def get_unique_watched(user_data):
+    friends_list = []
+    user_list = []
+    diff_list = []# (if dict in user_list and dict not in friends_list, append dict to diff list) = []
+
+    # loop through user_data 
+    for i in range(len(user_data["watched"])): #for i in range(len(user_data['watched_list'])):
+        print(i)
+        user_list.append(user_data["watched"][i])# user_data [watched list][i] # > append dicts to user_list
+        print(user_list)
+    for x in range(len(user_data["friends"]["watched"])):
+        friends_list.append(user_data["friends"]["watched"][x])
+        print(friends_list)
+        
+print(get_unique_watched(janes_data))  
+        
+    # 2nd loop through user_data [friends] [friends watched list][i] > append dicts to friends_list
+    # for dict in user_list if dict not in friends_list > append dict to diff list
+    # return diff list
 
 # function 1 
 # Create a function named get_unique_watched. This function should...
