@@ -61,13 +61,13 @@ janes_data = {
             "rating": 1
         }],
         "watched": [{
-            "title": "MOVIE_TITLE_1",
-            "genre": "GENRE_1",
-            "rating": 1
-        }, {
             "title": "MOVIE_TITLE_2",
             "genre": "GENRE_2",
             "rating": 2
+        }, {
+            "title": "MOVIE_TITLE_1",
+            "genre": "GENRE_1",
+            "rating": 1
         }, {
             "title": "MOVIE_TITLE_3",
             "genre": "GENRE_3",
@@ -227,7 +227,7 @@ print(get_unique_watched(janes_data))
 # take one parameter: user_data
 # the value of user_data will be a dictionary with a "watched" list of movie dictionaries, and a "friends"
 # This represents that the user has a list of watched movies and a list of friends
-# The value of "friends" is a list
+# The value of "friends" is a list "friends": [{"watched": []}]
 # Each item in "friends" is a dictionary. This dictionary has a key "watched", which has a list of movie dictionaries.
 # Each movie dictionary has a "title".
 # Consider the movies that the user has watched, and consider the movies that their friends have watched. Determine which movies the user has watched, but none of their friends have watched.
