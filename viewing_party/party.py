@@ -344,7 +344,7 @@ def get_friends_unique_watched(user_data):
     # print(f"{user_list=}, {friends_list=}")
     for dict in friends_list: 
         # print(dict)
-        if dict not in user_list:
+        if dict not in user_list and dict not in diff_list:
             diff_list.append(dict)
     # print(f"USER_LIST: {user_list}, FRIENDS_LIST: {friends_list}")
     return diff_list
