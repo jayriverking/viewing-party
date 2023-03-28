@@ -1,3 +1,134 @@
+# james_data (= amandas_data)
+james_data = {
+    "watched": [
+        {
+    "title": "The Lord of the Functions: The Fellowship of the Function",
+    "genre": "Fantasy",
+    "rating": 4.8
+}, 
+        {
+    "title": "The Lord of the Functions: The Two Parameters",
+    "genre": "Fantasy",
+    "rating": 4.0
+}, 
+        {
+    "title": "The Lord of the Functions: The Return of the Value",
+    "genre": "Fantasy",
+    "rating": 4.0
+}, 
+        {
+    "title": "The JavaScript and the React",
+    "genre": "Action",
+    "rating": 2.2
+}, 
+        {
+    "title": "Recursion",
+    "genre": "Intrigue",
+    "rating": 2.0
+}, 
+        {
+    "title": "Instructor Student TA Manager",
+    "genre": "Intrigue",
+    "rating": 4.5
+}
+        ],    
+    "friends": [
+        {
+            "watched": [
+                {
+    "title": "The Lord of the Functions: The Fellowship of the Function",
+    "genre": "Fantasy",
+    "rating": 4.8
+},
+                {
+    "title": "The Lord of the Functions: The Return of the Value",
+    "genre": "Fantasy",
+    "rating": 4.0
+},
+                {
+    "title": "The Programmer: An Unexpected Stack Trace",
+    "genre": "Fantasy",
+    "rating": 4.0
+},
+                {
+    "title": MOVIE_TITLE_1,
+    "genre": GENRE_1,
+    "rating": RATING_1
+},
+            ]
+        },
+        {
+            "watched": [
+                {
+    "title": "The Lord of the Functions: The Fellowship of the Function",
+    "genre": "Fantasy",
+    "rating": 4.8
+},
+                {
+    "title": "The JavaScript and the React",
+    "genre": "Action",
+    "rating": 2.2
+},
+                {
+    "title": "Recursion",
+    "genre": "Intrigue",
+    "rating": 2.0
+},
+                {
+    "title": "Zero Dark Python",
+    "genre": "Intrigue",
+    "rating": 3.0
+},
+            ]
+        }
+    ]  
+
+}
+
+# tester data
+janes_data = {
+        "watchlist": [{
+            "title": "MOVIE_TITLE_1",
+            "genre": "GENRE_1",
+            "rating": 1
+        }],
+        "watched": [{
+            "title": "MOVIE_TITLE_2",
+            "genre": "GENRE_2",
+            "rating": 2
+        }, {
+            "title": "MOVIE_TITLE_1",
+            "genre": "GENRE_1",
+            "rating": 1
+        }, {
+            "title": "MOVIE_TITLE_3",
+            "genre": "GENRE_3",
+            "rating": 3
+        }, 
+        {
+            "title": "MOVIE_TITLE_4",
+            "genre": "GENRE_3",
+            "rating": 2
+        }],
+    "friends": [{"watched": [{
+            "title": "MOVIE_TITLE_5",
+            "genre": "GENRE_1",
+            "rating": 1
+        }, {
+            "title": "MOVIE_TITLE_2",
+            "genre": "GENRE_2",
+            "rating": 2
+        }, {
+            "title": "MOVIE_TITLE_3",
+            "genre": "GENRE_3",
+            "rating": 3
+        }, 
+        {
+            "title": "MOVIE_TITLE_8",
+            "genre": "GENRE_3",
+            "rating": 2
+        }]}]
+    }
 
 
 
@@ -53,50 +184,6 @@ def add_to_watchlist(user_data, movie):
 # return the user_data
 
 
-# tester data
-janes_data = {
-        "watchlist": [{
-            "title": "MOVIE_TITLE_1",
-            "genre": "GENRE_1",
-            "rating": 1
-        }],
-        "watched": [{
-            "title": "MOVIE_TITLE_2",
-            "genre": "GENRE_2",
-            "rating": 2
-        }, {
-            "title": "MOVIE_TITLE_1",
-            "genre": "GENRE_1",
-            "rating": 1
-        }, {
-            "title": "MOVIE_TITLE_3",
-            "genre": "GENRE_3",
-            "rating": 3
-        }, 
-        {
-            "title": "MOVIE_TITLE_4",
-            "genre": "GENRE_3",
-            "rating": 2
-        }],
-    "friends": [{"watched": [{
-            "title": "MOVIE_TITLE_5",
-            "genre": "GENRE_1",
-            "rating": 1
-        }, {
-            "title": "MOVIE_TITLE_2",
-            "genre": "GENRE_2",
-            "rating": 2
-        }, {
-            "title": "MOVIE_TITLE_3",
-            "genre": "GENRE_3",
-            "rating": 3
-        }, 
-        {
-            "title": "MOVIE_TITLE_8",
-            "genre": "GENRE_3",
-            "rating": 2
-        }]}]
-    }
 
 def watch_movie(user_data, title):
     #conditional, remove fromwatchlist go to watch, return user_data 
