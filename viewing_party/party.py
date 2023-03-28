@@ -51,9 +51,9 @@ james_data = {
     "rating": 4.0
 },
                 {
-    "title": MOVIE_TITLE_1,
-    "genre": GENRE_1,
-    "rating": RATING_1
+    "title": "It Came from the Stack Trace",
+    "genre": "Horror",
+    "rating": 3.5
 },
             ]
         },
@@ -305,7 +305,7 @@ def get_unique_watched(user_data):
             diff_list.append(dict)
     return diff_list
         
-print(get_unique_watched(janes_data))  
+print(get_unique_watched(james_data))  
         
     # 2nd loop through user_data [friends] [friends watched list][i] > append dicts to friends_list
     # for dict in user_list if dict not in friends_list > append dict to diff list
