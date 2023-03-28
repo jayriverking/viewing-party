@@ -202,8 +202,8 @@ print(get_most_watched_genre(janes_data))
 # friends_list = []
 # user_list = []
 # diff_list (if dict in user_list and dict not in friends_list, append dict to diff list) = []
-# loop through user_data > access watched list > append dicts to user_list
-# 2nd loop through usre_data > friends > friends watched list > append dicts to friends_list
+# loop through user_data (for i in range(len(user_data[watched_list])): user_data [watched list][i] > append dicts to user_list
+# 2nd loop through user_data [friends] [friends watched list][i] > append dicts to friends_list
 # for dict in user_list if dict not in friends_list > append dict to diff list
 # return diff list
 
