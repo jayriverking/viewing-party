@@ -590,7 +590,10 @@ def get_favorite_genre(user_data):
     return fav_genre
 
 
-print(get_favorite_genre(james_data))
+# print(get_favorite_genre(james_data))
+
+
+
 
 # HELPER FUNCTION 2: GET FRIENDS WATCHED LIST:
 # movies_friends_watched = []
@@ -598,12 +601,25 @@ print(get_favorite_genre(james_data))
 # append movies to movies_friends_watched
 # return movies_friends_watched
 
+def get_friends_watched_list(user_data):
+    movies_friends_watched = []
+    friends = user_data["friends"]
+    # print(friends)
+    for dict in friends:
+        watched = dict["watched"]
+        # print(watched)
+        for movies in watched:
+            movies_friends_watched.append(movies)
+    return movies_friends_watched
+
+print(get_friends_watched_list(james_data))
+
 # Create a function named get_new_rec_by_genre. This function should...
 # take one parameter: user_data
 
 # def get_new_rec_by_genre(user_data)
 # recommended_movies = []
-# user_fav_genre = <<<HELPER FUNCTION>>>
+# user_fav_genre = <<<HELPER FUNCTION 1: get_favotire_genre(user_data)>>>
 # user_watched = user_data["watched"]
 # friends_watched_list = user_data[friends][watched] or an empty array --> fill w/ for loop <<<HELPER FUNCTION>>>
 # for movies in friends_watched_list:
