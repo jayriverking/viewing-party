@@ -1,5 +1,91 @@
 # james_data (= amandas_data)
+# james_data = {
+#     "watched": [
+#         {
+#     "title": "The Lord of the Functions: The Fellowship of the Function",
+#     "genre": "Fantasy",
+#     "rating": 4.8
+# }, 
+#         {
+#     "title": "The Lord of the Functions: The Two Parameters",
+#     "genre": "Fantasy",
+#     "rating": 4.0
+# }, 
+#         {
+#     "title": "The Lord of the Functions: The Return of the Value",
+#     "genre": "Fantasy",
+#     "rating": 4.0
+# }, 
+#         {
+#     "title": "The JavaScript and the React",
+#     "genre": "Action",
+#     "rating": 2.2
+# }, 
+#         {
+#     "title": "Recursion",
+#     "genre": "Intrigue",
+#     "rating": 2.0
+# }, 
+#         {
+#     "title": "Instructor Student TA Manager",
+#     "genre": "Intrigue",
+#     "rating": 4.5
+# }
+#         ],    
+#     "friends": [
+#         {
+#             "watched": [
+#                 {
+#     "title": "The Lord of the Functions: The Fellowship of the Function",
+#     "genre": "Fantasy",
+#     "rating": 4.8
+# },
+#                 {
+#     "title": "The Lord of the Functions: The Return of the Value",
+#     "genre": "Fantasy",
+#     "rating": 4.0
+# },
+#                 {
+#     "title": "The Programmer: An Unexpected Stack Trace",
+#     "genre": "Fantasy",
+#     "rating": 4.0
+# },
+#                 {
+#     "title": "It Came from the Stack Trace",
+#     "genre": "Horror",
+#     "rating": 3.5
+# },
+#             ]
+#         },
+#         {
+#             "watched": [
+#                 {
+#     "title": "The Lord of the Functions: The Fellowship of the Function",
+#     "genre": "Fantasy",
+#     "rating": 4.8
+# },
+#                 {
+#     "title": "The JavaScript and the React",
+#     "genre": "Action",
+#     "rating": 2.2
+# },
+#                 {
+#     "title": "Recursion",
+#     "genre": "Intrigue",
+#     "rating": 2.0
+# },
+#                 {
+#     "title": "Zero Dark Python",
+#     "genre": "Intrigue",
+#     "rating": 3.0
+# },
+#             ]
+#         }
+#     ]  
+
+# }
 james_data = {
+  "subscriptions": ['hulu', 'netflix','amazon', 'disney+'],
     "watched": [
         {
     "title": "The Lord of the Functions: The Fellowship of the Function",
@@ -38,22 +124,26 @@ james_data = {
                 {
     "title": "The Lord of the Functions: The Fellowship of the Function",
     "genre": "Fantasy",
-    "rating": 4.8
+    "rating": 4.8,
+    "host": 'disney+'
 },
                 {
     "title": "The Lord of the Functions: The Return of the Value",
     "genre": "Fantasy",
-    "rating": 4.0
+    "rating": 4.0,
+                  "host": 'hulu'
 },
                 {
     "title": "The Programmer: An Unexpected Stack Trace",
     "genre": "Fantasy",
-    "rating": 4.0
+    "rating": 4.0,
+                  "host": 'the wrong host'
 },
                 {
     "title": "It Came from the Stack Trace",
     "genre": "Horror",
-    "rating": 3.5
+    "rating": 3.5,
+                  "host": 'amazon'
 },
             ]
         },
@@ -62,22 +152,26 @@ james_data = {
                 {
     "title": "The Lord of the Functions: The Fellowship of the Function",
     "genre": "Fantasy",
-    "rating": 4.8
+    "rating": 4.8,
+                  "host": 'the wrong host'
 },
                 {
     "title": "The JavaScript and the React",
     "genre": "Action",
-    "rating": 2.2
+    "rating": 2.2,
+                  "host": 'netflix'
 },
                 {
     "title": "Recursion",
     "genre": "Intrigue",
-    "rating": 2.0
+    "rating": 2.0,
+                  "host": 'the wrong host'
 },
                 {
     "title": "Zero Dark Python",
     "genre": "Intrigue",
-    "rating": 3.0
+    "rating": 3.0,
+                  "host": 'disney+'
 },
             ]
         }
@@ -85,50 +179,51 @@ james_data = {
 
 }
 
+
 # tester data
-janes_data = {
-        "watchlist": [{
-            "title": "MOVIE_TITLE_1",
-            "genre": "GENRE_1",
-            "rating": 1
-        }],
-        "watched": [{
-            "title": "MOVIE_TITLE_2",
-            "genre": "GENRE_2",
-            "rating": 2
-        }, {
-            "title": "MOVIE_TITLE_1",
-            "genre": "GENRE_1",
-            "rating": 1
-        }, {
-            "title": "MOVIE_TITLE_3",
-            "genre": "GENRE_3",
-            "rating": 3
-        }, 
-        {
-            "title": "MOVIE_TITLE_4",
-            "genre": "GENRE_3",
-            "rating": 2
-        }],
-    "friends": [{"watched": [{
-            "title": "MOVIE_TITLE_5",
-            "genre": "GENRE_1",
-            "rating": 1
-        }, {
-            "title": "MOVIE_TITLE_2",
-            "genre": "GENRE_2",
-            "rating": 2
-        }, {
-            "title": "MOVIE_TITLE_3",
-            "genre": "GENRE_3",
-            "rating": 3
-        }, 
-        {
-            "title": "MOVIE_TITLE_8",
-            "genre": "GENRE_3",
-            "rating": 2
-        }]}]
-    }
+# janes_data = {
+#         "watchlist": [{
+#             "title": "MOVIE_TITLE_1",
+#             "genre": "GENRE_1",
+#             "rating": 1
+#         }],
+#         "watched": [{
+#             "title": "MOVIE_TITLE_2",
+#             "genre": "GENRE_2",
+#             "rating": 2
+#         }, {
+#             "title": "MOVIE_TITLE_1",
+#             "genre": "GENRE_1",
+#             "rating": 1
+#         }, {
+#             "title": "MOVIE_TITLE_3",
+#             "genre": "GENRE_3",
+#             "rating": 3
+#         }, 
+#         {
+#             "title": "MOVIE_TITLE_4",
+#             "genre": "GENRE_3",
+#             "rating": 2
+#         }],
+#     "friends": [{"watched": [{
+#             "title": "MOVIE_TITLE_5",
+#             "genre": "GENRE_1",
+#             "rating": 1
+#         }, {
+#             "title": "MOVIE_TITLE_2",
+#             "genre": "GENRE_2",
+#             "rating": 2
+#         }, {
+#             "title": "MOVIE_TITLE_3",
+#             "genre": "GENRE_3",
+#             "rating": 3
+#         }, 
+#         {
+#             "title": "MOVIE_TITLE_8",
+#             "genre": "GENRE_3",
+#             "rating": 2
+#         }]}]
+#     }
 
 
 
@@ -271,7 +366,7 @@ def get_most_watched_genre(user_data):
     return most_genre
 
 
-print(get_most_watched_genre(janes_data))
+# print(get_most_watched_genre(janes_data))
 
     # take one parameter: user_data
     #     the value of user_data will be a dictionary with a "watched" list of movie dictionaries. Each movie dictionary has a key "genre".
@@ -349,7 +444,7 @@ def get_friends_unique_watched(user_data):
     # print(f"USER_LIST: {user_list}, FRIENDS_LIST: {friends_list}")
     return diff_list
         
-print(get_friends_unique_watched(james_data)) 
+# print(get_friends_unique_watched(james_data)) 
 
 # function 2
 # Create a function named get_friends_unique_watched. This function should...
@@ -366,6 +461,96 @@ print(get_friends_unique_watched(james_data))
 # -----------------------------------------
 # ------------- WAVE 4 --------------------
 # -----------------------------------------
+
+def get_available_recs(user_data):
+
+    reccomendation_list = []
+    shared_sub = []
+
+    # Create a function named get_available_recs. This function should...
+#___________________________________________________
+
+
+
+    # for host in (user_data["subscriptions"]):
+    #     print(host)
+
+    # 
+    for sub in (user_data["friends"][0]["watched"]): # iterating through user_data's friend key indexing to the watched key 
+        # print(sub)
+        # 
+        if sub['host'] in user_data["subscriptions"]: # this is accessing the data in side the sub["host"] category  and it's checkint to see if the same data is in user_data's subscriptions 
+            # print(sub["host"])
+            shared_sub.append(sub['host']) # this is appending those subscriptions to the share_sub list. 
+            # print(shared_sub)
+   
+    for dict in (user_data["friends"][0]["watched"]):
+        # print(dict["title"])
+        if dict["title"] not in user_data["watched"][0]["title"]:
+                
+            # possible step checking common hosts. 
+            reccomendation_list.append(dict["title"])
+            print(reccomendation_list)
+
+    return reccomendation_list
+        #  Determine a list of recommended movies. A movie should be added to this list if and only if:
+    #     The user has not watched it
+    #     At least one of the user's friends has watched
+    #     The "host" of the movie is a service that is in the user's "subscriptions"
+    # Return the list of recommended movies
+    
+        # if movie in firends watched and not in user watched and in shared_sub 
+    # add to reccomendations. 
+        
+        # if sub['host'] in user_data["friends"][0]["watched"]:   
+        #     print(sub)     
+        #     #
+            # # NOW WE KNOW WHAT SUB IS :>
+            # print(shared_sub)
+        
+        # FOR TRYING OUT PURPOSES; WHY AM I IN ALL CAPS 
+        
+        
+       
+        #     shared_sub.append
+        #     print(shared_sub)
+    
+   
+    
+
+    
+   
+        
+        # if host in user_data["subscriptions"] and host in user_data["friends"]:
+        #     shared_sub.append(host)
+        #     print(shared_sub)
+    
+ 
+
+#     for movie in user_data["subcriptions"]:
+#         if movie in user_data["friends"]["watched"] and movie not in user_data["watched"]:
+#             reccomendation_list.append
+print(get_available_recs(james_data))
+# should we make helper function from 
+# for friend in friends, get watched , 
+# # get watched movies 
+# if host in movie and host_ in user data 
+    # the host in the movie list and it's in user dats host 
+
+# if movie in friends and no in user_data. 
+#     reccomendation.append(movie)
+    
+#     return movies 
+
+
+    #-----------------__________
+    # take one parameteruser_data
+    #     user_data will have a field "subscriptions". The value of "subscriptions" is a list of strings
+#         This represents the names of streaming services that the user has access to
+#         Each friend in "friends" has a watched list. Each movie in the watched list has a "host", 
+# which is a string that says what streaming service it's hosted on
+    #
+
 
 # -----------------------------------------
 # ------------- WAVE 5 --------------------
