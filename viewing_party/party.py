@@ -592,9 +592,6 @@ def get_favorite_genre(user_data):
 
 # print(get_favorite_genre(james_data))
 
-
-
-
 # HELPER FUNCTION 2: GET FRIENDS WATCHED LIST:
 # movies_friends_watched = []
 # loop through the user_data list & get to friends list > [i] > loop
@@ -612,20 +609,36 @@ def get_friends_watched_list(user_data):
             movies_friends_watched.append(movies)
     return movies_friends_watched
 
-print(get_friends_watched_list(james_data))
+# print(get_friends_watched_list(james_data))
 
 # Create a function named get_new_rec_by_genre. This function should...
 # take one parameter: user_data
 
-# def get_new_rec_by_genre(user_data)
+
 # recommended_movies = []
 # user_fav_genre = <<<HELPER FUNCTION 1: get_favotire_genre(user_data)>>>
 # user_watched = user_data["watched"]
-# friends_watched_list = user_data[friends][watched] or an empty array --> fill w/ for loop <<<HELPER FUNCTION>>>
+# friends_watched_list =  <<<HELPER FUNCTION>>>
 # for movies in friends_watched_list:
 # If movie["genre"] == user_fav_genre and movie not in user_watched:
 # recommended_movies.append(movie)
 # return recommended movies
+
+def get_new_rec_by_genre(user_data):
+    recommended_movies = []
+    user_fav_genre = get_favorite_genre(user_data)
+    user_watched = user_data["watched"]
+    print(user_fav_genre)
+    # print(user_watched)
+    friends_watched = get_friends_watched_list(user_data)
+    for movie in friends_watched:
+        # print(movie["genre"])
+        if movie["genre"] == user_fav_genre and movie not in user_watched:
+            recommended_movies.append(movie)
+    return recommended_movies
+
+print(get_new_rec_by_genre(james_data)
+)
 
 # Consider the user's most frequently watched genre. (helper func;)
 # Then, determine a list of recommended movies. 
