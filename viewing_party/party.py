@@ -371,3 +371,20 @@ print(get_friends_unique_watched(james_data))
 # ------------- WAVE 5 --------------------
 # -----------------------------------------
 
+# Create a function named get_new_rec_by_genre. This function should...
+# take one parameter: user_data
+# def get_new_rec_by_genre(user_data)
+# Consider the user's most frequently watched genre. Then, determine a list of recommended movies. 
+# A movie should be added to this list if and only if:
+# The user has not watched it
+# At least one of the user's friends has watched
+# The "genre" of the movie is the same as the user's most frequent genre
+# Return the list of recommended movies
+# Create a function named get_rec_from_favorites. This function should...
+# take one parameter: user_data
+# user_data will have a field "favorites". The value of "favorites" is a list of movie dictionaries
+# This represents the user's favorite movies
+# Determine a list of recommended movies. A movie should be added to this list if and only if:
+# The movie is in the user's "favorites"
+# None of the user's friends have watched it
+# Return the list of recommended movies
