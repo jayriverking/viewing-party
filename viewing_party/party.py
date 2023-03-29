@@ -85,7 +85,7 @@
 
 # }
 james_data = {
-  "subscriptions": ['hulu', 'netflix','amazon', 'disney+'],
+"subscriptions": ['hulu', 'netflix','amazon', 'disney+'],
     "watched": [
         {
     "title": "The Lord of the Functions: The Fellowship of the Function",
@@ -131,19 +131,19 @@ james_data = {
     "title": "The Lord of the Functions: The Return of the Value",
     "genre": "Fantasy",
     "rating": 4.0,
-                  "host": 'hulu'
+            "host": 'hulu'
 },
                 {
     "title": "The Programmer: An Unexpected Stack Trace",
     "genre": "Fantasy",
     "rating": 4.0,
-                  "host": 'the wrong host'
+            "host": 'the wrong host'
 },
                 {
     "title": "It Came from the Stack Trace",
     "genre": "Horror",
     "rating": 3.5,
-                  "host": 'amazon'
+            "host": 'amazon'
 },
             ]
         },
@@ -153,25 +153,25 @@ james_data = {
     "title": "The Lord of the Functions: The Fellowship of the Function",
     "genre": "Fantasy",
     "rating": 4.8,
-                  "host": 'the wrong host'
+            "host": 'the wrong host'
 },
                 {
     "title": "The JavaScript and the React",
     "genre": "Action",
     "rating": 2.2,
-                  "host": 'netflix'
+            "host": 'netflix'
 },
                 {
     "title": "Recursion",
     "genre": "Intrigue",
     "rating": 2.0,
-                  "host": 'the wrong host'
+            "host": 'the wrong host'
 },
                 {
     "title": "Zero Dark Python",
     "genre": "Intrigue",
     "rating": 3.0,
-                  "host": 'disney+'
+            "host": 'disney+'
 },
             ]
         }
@@ -530,7 +530,11 @@ def get_available_recs(user_data):
 #     for movie in user_data["subcriptions"]:
 #         if movie in user_data["friends"]["watched"] and movie not in user_data["watched"]:
 #             reccomendation_list.append
-print(get_available_recs(james_data))
+
+
+# print(get_available_recs(james_data))
+
+
 # should we make helper function from 
 # for friend in friends, get watched , 
 # # get watched movies 
@@ -556,15 +560,67 @@ print(get_available_recs(james_data))
 # ------------- WAVE 5 --------------------
 # -----------------------------------------
 
+# HELPER FUNC1: GET FAVORITE GENRE(user_data):
+# new dict to keep count > counter_dict
+# fav_genre = ""
+# score = 0
+# > access movies watched list: genre --> loop;
+#  if movie["genre"] not in counter_dict:
+# counter_dict[genre] = 1
+# else counter_dict[genre] += 1
+# > loop through counter_dict; key, val in items()
+# > if val > score: fav_genre = key
+# return fav genre
+
+def get_favorite_genre(user_data):
+    counter_dict = {}
+    fav_genre = ""
+    score = 0
+    for i in range(len(user_data["watched"])):
+        genre =  user_data["watched"][i]["genre"]
+        if genre not in counter_dict:
+            counter_dict[genre] = 1
+        else:
+            counter_dict[genre] += 1
+    # print(counter_dict)
+    for genre, counter in counter_dict.items():
+        if counter > score:
+            score = counter
+            fav_genre = genre
+    return fav_genre
+
+
+print(get_favorite_genre(james_data))
+
+# HELPER FUNCTION 2: GET FRIENDS WATCHED LIST:
+# movies_friends_watched = []
+# loop through the user_data list & get to friends list > [i] > loop
+# append movies to movies_friends_watched
+# return movies_friends_watched
+
 # Create a function named get_new_rec_by_genre. This function should...
 # take one parameter: user_data
+
 # def get_new_rec_by_genre(user_data)
-# Consider the user's most frequently watched genre. Then, determine a list of recommended movies. 
+# recommended_movies = []
+# user_fav_genre = <<<HELPER FUNCTION>>>
+# user_watched = user_data["watched"]
+# friends_watched_list = user_data[friends][watched] or an empty array --> fill w/ for loop <<<HELPER FUNCTION>>>
+# for movies in friends_watched_list:
+# If movie["genre"] == user_fav_genre and movie not in user_watched:
+# recommended_movies.append(movie)
+# return recommended movies
+
+# Consider the user's most frequently watched genre. (helper func;)
+# Then, determine a list of recommended movies. 
 # A movie should be added to this list if and only if:
-# The user has not watched it
-# At least one of the user's friends has watched
-# The "genre" of the movie is the same as the user's most frequent genre
+# The user has not watched it (not in user_list)
+# At least one of the user's friends has watched (in friends watched list)
+# The "genre" of the movie is the same as the user's most frequent genre (movie["genre"] == user_most_frequent_genre)
 # Return the list of recommended movies
+
+
+
 # Create a function named get_rec_from_favorites. This function should...
 # take one parameter: user_data
 # user_data will have a field "favorites". The value of "favorites" is a list of movie dictionaries
