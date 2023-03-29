@@ -1,89 +1,4 @@
-# james_data (= amandas_data)
-# james_data = {
-#     "watched": [
-#         {
-#     "title": "The Lord of the Functions: The Fellowship of the Function",
-#     "genre": "Fantasy",
-#     "rating": 4.8
-# }, 
-#         {
-#     "title": "The Lord of the Functions: The Two Parameters",
-#     "genre": "Fantasy",
-#     "rating": 4.0
-# }, 
-#         {
-#     "title": "The Lord of the Functions: The Return of the Value",
-#     "genre": "Fantasy",
-#     "rating": 4.0
-# }, 
-#         {
-#     "title": "The JavaScript and the React",
-#     "genre": "Action",
-#     "rating": 2.2
-# }, 
-#         {
-#     "title": "Recursion",
-#     "genre": "Intrigue",
-#     "rating": 2.0
-# }, 
-#         {
-#     "title": "Instructor Student TA Manager",
-#     "genre": "Intrigue",
-#     "rating": 4.5
-# }
-#         ],    
-#     "friends": [
-#         {
-#             "watched": [
-#                 {
-#     "title": "The Lord of the Functions: The Fellowship of the Function",
-#     "genre": "Fantasy",
-#     "rating": 4.8
-# },
-#                 {
-#     "title": "The Lord of the Functions: The Return of the Value",
-#     "genre": "Fantasy",
-#     "rating": 4.0
-# },
-#                 {
-#     "title": "The Programmer: An Unexpected Stack Trace",
-#     "genre": "Fantasy",
-#     "rating": 4.0
-# },
-#                 {
-#     "title": "It Came from the Stack Trace",
-#     "genre": "Horror",
-#     "rating": 3.5
-# },
-#             ]
-#         },
-#         {
-#             "watched": [
-#                 {
-#     "title": "The Lord of the Functions: The Fellowship of the Function",
-#     "genre": "Fantasy",
-#     "rating": 4.8
-# },
-#                 {
-#     "title": "The JavaScript and the React",
-#     "genre": "Action",
-#     "rating": 2.2
-# },
-#                 {
-#     "title": "Recursion",
-#     "genre": "Intrigue",
-#     "rating": 2.0
-# },
-#                 {
-#     "title": "Zero Dark Python",
-#     "genre": "Intrigue",
-#     "rating": 3.0
-# },
-#             ]
-#         }
-#     ]  
-
-# }
+# tester_data
 james_data = {
 "subscriptions": ['hulu', 'netflix','amazon', 'disney+'],
     "watched": [
@@ -179,55 +94,6 @@ james_data = {
 
 }
 
-
-# tester data
-# janes_data = {
-#         "watchlist": [{
-#             "title": "MOVIE_TITLE_1",
-#             "genre": "GENRE_1",
-#             "rating": 1
-#         }],
-#         "watched": [{
-#             "title": "MOVIE_TITLE_2",
-#             "genre": "GENRE_2",
-#             "rating": 2
-#         }, {
-#             "title": "MOVIE_TITLE_1",
-#             "genre": "GENRE_1",
-#             "rating": 1
-#         }, {
-#             "title": "MOVIE_TITLE_3",
-#             "genre": "GENRE_3",
-#             "rating": 3
-#         }, 
-#         {
-#             "title": "MOVIE_TITLE_4",
-#             "genre": "GENRE_3",
-#             "rating": 2
-#         }],
-#     "friends": [{"watched": [{
-#             "title": "MOVIE_TITLE_5",
-#             "genre": "GENRE_1",
-#             "rating": 1
-#         }, {
-#             "title": "MOVIE_TITLE_2",
-#             "genre": "GENRE_2",
-#             "rating": 2
-#         }, {
-#             "title": "MOVIE_TITLE_3",
-#             "genre": "GENRE_3",
-#             "rating": 3
-#         }, 
-#         {
-#             "title": "MOVIE_TITLE_8",
-#             "genre": "GENRE_3",
-#             "rating": 2
-#         }]}]
-#     }
-
-
-
-
 # ------------- WAVE 1 --------------------
 
 def create_movie(title, genre, rating):
@@ -235,48 +101,18 @@ def create_movie(title, genre, rating):
         return {"title": title, "genre": genre, "rating": rating}
     else: 
         return None
-# If those three attributes are truthy, then return a dictionary. This dictionary should...
-# Have three key-value pairs, with specific keys
-# The three keys should be "title", "genre", and "rating"
-# The values of these key-value pairs should be appropriate values
-# If title is falsy, genre is falsy, or rating is falsy, this function should return None
+
+
 
 def add_to_watched(user_data, movie):
     
     user_data["watched"].append(movie)
     return user_data 
 
-# function 2:
-# Create a function named add_to_watched. This function should...
-# take two parameters: user_data, movie
-# the value of user_data will be a dictionary with a key "watched", and a value which is a list of dictionaries representing the movies the user has watched
-# An empty list represents that the user has no movies in their watched list
-# the value of movie will be a dictionary in this format:
-# {
-#   "title": "Title A",
-#   "genre": "Horror",
-#   "rating": 3.5
-# }
-# add the movie to the "watched" list inside of user_data
-# return the user_data
 
 def add_to_watchlist(user_data, movie):
     user_data["watchlist"].append(movie)
     return user_data
-
-# function 3
-# Create a function named add_to_watchlist. This function should...
-# take two parameters: user_data, movie
-# the value of user_data will be a dictionary with a key "watchlist", and a value which is a list of dictionaries representing the movies the user wants to watch
-# An empty list represents that the user has no movies in their watchlist
-# the value of movie will be a dictionary in this format:
-# {
-#   "title": "Title A",
-#   "genre": "Horror",
-#   "rating": 3.5
-# }
-# add the movie to the "watchlist" list inside of user_data
-# return the user_data
 
 
 
@@ -292,25 +128,6 @@ def watch_movie(user_data, title):
     return user_data
 
     
-
-
-
-
-
-# function 4
-# Create a function named watch_movie. This function should...
-# take two parameters: user_data, title
-# the value of user_data will be a dictionary with a "watchlist" and a "watched"
-# This represents that the user has a watchlist and a list of watched movies
-# the value of title will be a string
-# This represents the title of the movie the user has watched
-# If the title is in a movie in the user's watchlist:
-# remove that movie from the watchlist
-# add that movie to watched
-# return the user_data
-# If the title is not a movie in the user's watchlist:
-# return the user_data
-# Note: For Waves 2, 3, 4, and 5, your implementation of each of the functions should not modify user_data.
 
 # -----------------------------------------
 # ------------- WAVE 2 --------------------
@@ -333,18 +150,7 @@ def get_watched_avg_rating(user_data):
     return avg_rating
         # print(sum(dict['rating']))
 
-# print(get_watched_avg_rating(janes_data))
 
-    # take one parameter: user_data
-    #     the value of user_data will be a dictionary with a "watched" list of movie dictionaries
-    #         This represents that the user has a list of watched movies
-    # Calculate the average rating of all movies in the watched list
-    #     The average rating of an empty watched list is 0.0
-    # return the average rating
-
-# Function 2 
-
-    # Create a function named get_most_watched_genre. This function should...
 def get_most_watched_genre(user_data):
     counter = {}
     most_genre = ""
@@ -365,16 +171,6 @@ def get_most_watched_genre(user_data):
             most_genre = key
     return most_genre
 
-
-# print(get_most_watched_genre(janes_data))
-
-    # take one parameter: user_data
-    #     the value of user_data will be a dictionary with a "watched" list of movie dictionaries. Each movie dictionary has a key "genre".
-    #         This represents that the user has a list of watched movies. Each watched movie has a genre.
-    #         The values of "genre" is a string.
-    # Determine which genre is most frequently occurring in the watched list
-    # return the genre that is the most frequently watched
-    # If the value of "watched" is an empty list, get_most_watched_genre should return None
 
 # -----------------------------------------
 # ------------- WAVE 3 --------------------
@@ -408,16 +204,6 @@ def get_unique_watched(user_data):
     # for dict in user_list if dict not in friends_list > append dict to diff list
     # return diff list
 
-# function 1 
-# Create a function named get_unique_watched. This function should...
-# take one parameter: user_data
-# the value of user_data will be a dictionary with a "watched" list of movie dictionaries, and a "friends"
-# This represents that the user has a list of watched movies and a list of friends
-# The value of "friends" is a list "friends": [{"watched": []}]
-# Each item in "friends" is a dictionary. This dictionary has a key "watched", which has a list of movie dictionaries.
-# Each movie dictionary has a "title".
-# Consider the movies that the user has watched, and consider the movies that their friends have watched. Determine which movies the user has watched, but none of their friends have watched.
-# Return a list of dictionaries, that represents a list of movies
 
 
 # def get_friends_unique_watched(user_data):
@@ -444,18 +230,6 @@ def get_friends_unique_watched(user_data):
     # print(f"USER_LIST: {user_list}, FRIENDS_LIST: {friends_list}")
     return diff_list
         
-# print(get_friends_unique_watched(james_data)) 
-
-# function 2
-# Create a function named get_friends_unique_watched. This function should...
-# take one parameter: user_data
-# the value of user_data will be a dictionary with a "watched" list of movie dictionaries, and a "friends"
-# This represents that the user has a list of watched movies and a list of friends
-# The value of "friends" is a list
-# Each item in "friends" is a dictionary. This dictionary has a key "watched", which has a list of movie dictionaries.
-# Each movie dictionary has a "title".
-# Consider the movies that the user has watched, and consider the movies that their friends have watched. Determine which movies at least one of the user's friends have watched, but the user has not watched.
-# Return a list of dictionaries, that represents a list of movies
 
         
 # -----------------------------------------
@@ -590,7 +364,6 @@ def get_favorite_genre(user_data):
     return fav_genre
 
 
-# print(get_favorite_genre(james_data))
 
 # HELPER FUNCTION 2: GET FRIENDS WATCHED LIST:
 # movies_friends_watched = []
@@ -610,7 +383,6 @@ def get_friends_watched_list(user_data):
                 movies_friends_watched.append(movie)
     return movies_friends_watched
 
-# print(get_friends_watched_list(james_data))
 
 # Create a function named get_new_rec_by_genre. This function should...
 # take one parameter: user_data
@@ -636,24 +408,10 @@ def get_new_rec_by_genre(user_data):
             recommended_movies.append(movie)
     return recommended_movies
 
-# print(get_new_rec_by_genre(james_data)
-# )
-
-
 
 
 # Create a function named get_rec_from_favorites. This function should...
 # take one parameter: user_data
-
-
-
-# user_data will have a field "favorites". The value of "favorites" is a list of movie dictionaries
-# This represents the user's favorite movies
-# Determine a list of recommended movies. A movie should be added to this list if and only if:
-# The movie is in the user's "favorites"
-# None of the user's friends have watched it
-# Return the list of recommended movies
-
 # def get_rec_from_favorites(user_data):
 # favorites = user_data["favorites"]
 # recommended_by_user = []
