@@ -614,8 +614,6 @@ def get_friends_watched_list(user_data):
 
 # Create a function named get_new_rec_by_genre. This function should...
 # take one parameter: user_data
-
-
 # recommended_movies = []
 # user_fav_genre = <<<HELPER FUNCTION 1: get_favotire_genre(user_data)>>>
 # user_watched = user_data["watched"]
@@ -638,24 +636,39 @@ def get_new_rec_by_genre(user_data):
             recommended_movies.append(movie)
     return recommended_movies
 
-print(get_new_rec_by_genre(james_data)
-)
+# print(get_new_rec_by_genre(james_data)
+# )
 
-# Consider the user's most frequently watched genre. (helper func;)
-# Then, determine a list of recommended movies. 
-# A movie should be added to this list if and only if:
-# The user has not watched it (not in user_list)
-# At least one of the user's friends has watched (in friends watched list)
-# The "genre" of the movie is the same as the user's most frequent genre (movie["genre"] == user_most_frequent_genre)
-# Return the list of recommended movies
 
 
 
 # Create a function named get_rec_from_favorites. This function should...
 # take one parameter: user_data
+
+
+
 # user_data will have a field "favorites". The value of "favorites" is a list of movie dictionaries
 # This represents the user's favorite movies
 # Determine a list of recommended movies. A movie should be added to this list if and only if:
 # The movie is in the user's "favorites"
 # None of the user's friends have watched it
 # Return the list of recommended movies
+
+# def get_rec_from_favorites(user_data):
+# favorites = user_data["favorites"]
+# recommended_by_user = []
+# friends_watched = get_Friends_watched lol
+# for movie in favorites:
+# if movie not in friends_watched:
+# recommended_by_user.append(movie) 
+
+def get_rec_from_favorites(user_data):
+    favorites = user_data["favorites"]
+    recommended_by_user = []
+    friends_watched = get_friends_watched_list(user_data)
+    for movie in favorites:
+        if movie not in friends_watched and movie not in recommended_by_user:
+            recommended_by_user.append(movie)
+    return recommended_by_user
+
+
