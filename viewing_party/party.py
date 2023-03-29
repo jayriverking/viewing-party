@@ -605,8 +605,9 @@ def get_friends_watched_list(user_data):
     for dict in friends:
         watched = dict["watched"]
         # print(watched)
-        for movies in watched:
-            movies_friends_watched.append(movies)
+        for movie in watched:
+            if movie not in movies_friends_watched:
+                movies_friends_watched.append(movie)
     return movies_friends_watched
 
 # print(get_friends_watched_list(james_data))
