@@ -1,3 +1,4 @@
+
 def create_movie(title, genre, rating):
     if title and genre and rating: 
         return {"title": title, "genre": genre, "rating": rating}
@@ -12,6 +13,7 @@ def add_to_watched(user_data, movie):
 def add_to_watchlist(user_data, movie):
     user_data["watchlist"].append(movie)
     return user_data
+
 def watch_movie(user_data, title):
     for i in range(len(user_data["watchlist"])):
         if user_data["watchlist"][i]["title"] == title:
@@ -19,6 +21,7 @@ def watch_movie(user_data, title):
             user_data["watchlist"].remove(user_data["watchlist"][i])
     return user_data
 
+    
 def get_watched_avg_rating(user_data):
     if len(user_data['watched']) == 0:
         return 0
@@ -47,6 +50,7 @@ def get_most_watched_genre(user_data):
             most_genre = key
     return most_genre
 
+
 def get_unique_watched(user_data):
     friends_list = []
     user_list = []
@@ -74,6 +78,9 @@ def get_friends_unique_watched(user_data):
         if dict not in user_list and dict not in diff_list:
             diff_list.append(dict)
     return diff_list
+        
+
+
 
 def get_available_recs(user_data):
     reccomendation_list = []
@@ -100,11 +107,31 @@ def get_new_rec_by_genre(user_data):
             rec_list.append(movie) 
     return rec_list
 
+
+def get_friends_watched_list(user_data):
+    movies_friends_watched = []
+    friends = user_data["friends"]
+    for dict in friends:
+        watched = dict["watched"]
+        for movie in watched:
+            if movie not in movies_friends_watched:
+                movies_friends_watched.append(movie)
+    return movies_friends_watched
+
+
+
+
+
+
+
+
 def get_rec_from_favorites(user_data):
-    friend_watched_list = get_friend_watchlist(user_data)
-    rec_list = []
-    for movie_dict in user_data["favorites"]:
-        if movie_dict not in friend_watched_list:
-            rec_list.append(movie_dict)
-            print(rec_list)
-    return rec_list
+    favorites = user_data["favorites"]
+    recommended_by_user = []
+    friends_watched = get_friends_watched_list(user_data)
+    for movie in favorites:
+        if movie not in friends_watched and movie not in recommended_by_user:
+            recommended_by_user.append(movie)
+    return recommended_by_user
+
+
