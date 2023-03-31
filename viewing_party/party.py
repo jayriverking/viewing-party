@@ -108,19 +108,16 @@ def get_new_rec_by_genre(user_data):
     return rec_list
 
 
-def get_friends_watched_list(user_data):
-    movies_friends_watched = []
-    friends = user_data["friends"]
-    for dict in friends:
-        watched = dict["watched"]
-        for movie in watched:
-            if movie not in movies_friends_watched:
-                movies_friends_watched.append(movie)
-    return movies_friends_watched
-
-
-
-
+# realized there's two of the same helper function... commenting out for redundancy
+# def get_friends_watched_list(user_data):
+#     movies_friends_watched = []
+#     friends = user_data["friends"]
+#     for dict in friends:
+#         watched = dict["watched"]
+#         for movie in watched:
+#             if movie not in movies_friends_watched:
+#                 movies_friends_watched.append(movie)
+#     return movies_friends_watched
 
 
 
@@ -128,7 +125,7 @@ def get_friends_watched_list(user_data):
 def get_rec_from_favorites(user_data):
     favorites = user_data["favorites"]
     recommended_by_user = []
-    friends_watched = get_friends_watched_list(user_data)
+    friends_watched = get_friend_watchlist(user_data)
     for movie in favorites:
         if movie not in friends_watched and movie not in recommended_by_user:
             recommended_by_user.append(movie)
