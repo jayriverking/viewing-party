@@ -98,6 +98,7 @@ def get_friend_watchlist(user_data):
             friend_watched_list.append(movie)
     return friend_watched_list
 
+
 def get_new_rec_by_genre(user_data):
     friends_watched_list = get_friends_unique_watched(user_data)
     favorite_genre = get_most_watched_genre(user_data)
@@ -118,8 +119,6 @@ def get_new_rec_by_genre(user_data):
 #             if movie not in movies_friends_watched:
 #                 movies_friends_watched.append(movie)
 #     return movies_friends_watched
-
-
 
 
 def get_rec_from_favorites(user_data):
